@@ -1,5 +1,24 @@
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
+local GUI = Mercury:Create{
+    Name = "RiceMode | Pet Go",
+    Size = UDim2.fromOffset(600, 400),
+    Theme = Mercury.Themes.Dark,
+    Link = "https://github.com/deeeity/mercury-lib"
+}
+local Main = GUI:Tab{
+	Name = "Main",
+	Icon = "rbxassetid://8569322835"
+}
+Main:Toggle{
+	Name = "Auto Upgrade",
+	StartingState = false,
+	Description = nil,
+	Callback = function(Value) 
+    _G.AutoUpgrade = Value
+  end
+}
 while wait() do
-  if _G.TuDongNangCap == true then
+  if _G.AutoUpgrade == true then
 local args = {
     [1] = "Root"
 }
@@ -132,65 +151,5 @@ local args = {
 
 game:GetService("ReplicatedStorage").Network.Upgrades_Purchase:InvokeServer(unpack(args))
 wait(5)
-local args = {
-    [1] = "Lucky Potion"
-}
-
-game:GetService("ReplicatedStorage").Network.Upgrades_Purchase:InvokeServer(unpack(args))
-Wait(5)
-local args = {
-    [1] = "Hoverboard"
-}
-
-game:GetService("ReplicatedStorage").Network.Upgrades_Purchase:InvokeServer(unpack(args))
-Wait(5)
-local args = {
-    [1] = "More Fruit"
-}
-
-game:GetService("ReplicatedStorage").Network.Upgrades_Purchase:InvokeServer(unpack(args))
-Wait(5)
-local args = {
-    [1] = "Trading Plaza"
-}
-
-game:GetService("ReplicatedStorage").Network.Upgrades_Purchase:InvokeServer(unpack(args))
-Wait(5)
-local args = {
-    [1] = "Pet Index"
-}
-
-game:GetService("ReplicatedStorage").Network.Upgrades_Purchase:InvokeServer(unpack(args))
-Wait(5)
-local args = {
-    [1] = "Lucky Potion"
-}
-
-game:GetService("ReplicatedStorage").Network.Upgrades_Purchase:InvokeServer(unpack(args))
-Wait(5)
-local args = {
-    [1] = "Hoverboard"
-}
-
-game:GetService("ReplicatedStorage").Network.Upgrades_Purchase:InvokeServer(unpack(args))
-Wait(5)
-local args = {
-    [1] = "More Fruit"
-}
-
-game:GetService("ReplicatedStorage").Network.Upgrades_Purchase:InvokeServer(unpack(args))
-Wait(5)
-local args = {
-    [1] = "Trading Plaza"
-}
-
-game:GetService("ReplicatedStorage").Network.Upgrades_Purchase:InvokeServer(unpack(args))
-Wait(5)
-local args = {
-    [1] = "Pet Index"
-}
-
-game:GetService("ReplicatedStorage").Network.Upgrades_Purchase:InvokeServer(unpack(args))
-Wait(5)
   end
 end
