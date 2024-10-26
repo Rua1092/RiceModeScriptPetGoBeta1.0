@@ -1,4 +1,27 @@
-_G.TuDongNangCap = true
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local Window = Fluent:CreateWindow({
+    Title = "Pet Go" .. Fluent.Version,
+    SubTitle = "by RiceMode",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "Aqua",
+    MinimizeKey = Enum.KeyCode.Y -- Used when theres no MinimizeKeybind
+})
+-- Fluent provides Lucide Icons, they are optional
+local Tabs = {
+    Main = Window:AddTab({ Title = "Main", Icon = "" }),
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+}
+local Toggle = Main:AddToggle("Auto Upgrade", 
+{
+    Title = "Toggle", 
+    Description = "Toggle description",
+    Default = false
+    Callback = function(Value)
+      _G.TuDongNangCap = Value
+    end
+})
 
 while wait() do
   if _G.TuDongNangCap == true then
