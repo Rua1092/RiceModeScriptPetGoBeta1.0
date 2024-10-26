@@ -1,13 +1,13 @@
 local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostDuckyy/UI-Libraries/refs/heads/main/Valiant/source.lua'))()
 
-local Window = library:CreateWindow("RiceMode", "1.p", 10044538000)
+local Window = library:CreateWindow("RiceMode", "1.0", 10044538000)
 
-local Tab = Window:CreateTab("")
+local Tab = Window:CreateTab("PetGo")
 
 local Page1 = Tab:CreateFrame("Main")
 
 Toggle = Page1:CreateToggle("AutoUpgrade", "", function(Value)
-Toggle:UpdateToggle("New Title", "New Description")
+Toggle:UpdateToggle("AutoUpgrade", "")
 _G.AutoUpgrade = Value
 end)
 
