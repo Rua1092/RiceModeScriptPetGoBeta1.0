@@ -1,13 +1,10 @@
-local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostDuckyy/UI-Libraries/refs/heads/main/Valiant/source.lua'))()
+local lib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/Vape.txt")()
 
-local Window = library:CreateWindow("RiceMode", "1.0", 10044538000)
+local win = lib:Window("PREVIEW",Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
 
-local Tab = Window:CreateTab("PetGo")
+local main = win:Tab("Main")
 
-local Page1 = Tab:CreateFrame("Main")
-
-Toggle = Page1:CreateToggle("AutoUpgrade", "", function(Value)
-Toggle:UpdateToggle("AutoUpgrade", "")
+main:Toggle("Toggle",false, function(Value)
 _G.AutoUpgrade = Value
 end)
 
