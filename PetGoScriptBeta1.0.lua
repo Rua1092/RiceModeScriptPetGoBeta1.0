@@ -1,22 +1,16 @@
-local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
-local GUI = Mercury:Create{
-    Name = "RiceMode | Pet Go",
-    Size = UDim2.fromOffset(600, 400),
-    Theme = Mercury.Themes.Dark,
-    Link = "https://github.com/deeeity/mercury-lib"
-}
-local Main = GUI:Tab{
-	Name = "Main",
-	Icon = "rbxassetid://8569322835"
-}
-Main:Toggle{
-	Name = "Auto Upgrade",
-	StartingState = false,
-	Description = nil,
-	Callback = function(Value) 
-    _G.AutoUpgrade = Value
-  end
-}
+local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostDuckyy/UI-Libraries/refs/heads/main/Valiant/source.lua'))()
+
+local Window = library:CreateWindow("RiceMode", "1.p", 10044538000)
+
+local Tab = Window:CreateTab("")
+
+local Page1 = Tab:CreateFrame("Main")
+
+Toggle = Page1:CreateToggle("AutoUpgrade", "", function(Value)
+Toggle:UpdateToggle("New Title", "New Description")
+_G.AutoUpgrade = Value
+end)
+
 while wait() do
   if _G.AutoUpgrade == true then
 local args = {
