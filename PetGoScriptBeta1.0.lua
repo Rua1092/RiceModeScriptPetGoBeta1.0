@@ -164,5 +164,35 @@ local args = {
 
 game:GetService("ReplicatedStorage").Network.Upgrades_Purchase:InvokeServer(unpack(args))
 Wait(5)
+local args = {
+    [1] = "Lucky Potion"
+}
+
+game:GetService("ReplicatedStorage").Network.Upgrades_Purchase:InvokeServer(unpack(args))
+Wait(5)
+local args = {
+    [1] = "Hoverboard"
+}
+
+game:GetService("ReplicatedStorage").Network.Upgrades_Purchase:InvokeServer(unpack(args))
+Wait(5)
+local args = {
+    [1] = "More Fruit"
+}
+
+game:GetService("ReplicatedStorage").Network.Upgrades_Purchase:InvokeServer(unpack(args))
+Wait(5)
+local args = {
+    [1] = "Trading Plaza"
+}
+
+game:GetService("ReplicatedStorage").Network.Upgrades_Purchase:InvokeServer(unpack(args))
+Wait(5)
+local args = {
+    [1] = "Pet Index"
+}
+
+game:GetService("ReplicatedStorage").Network.Upgrades_Purchase:InvokeServer(unpack(args))
+Wait(5)
   end
 end
