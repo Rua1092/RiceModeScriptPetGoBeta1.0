@@ -29,6 +29,10 @@ local win = lib:Window("PREVIEW",Color3.fromRGB(44, 120, 224), Enum.KeyCode.Righ
 
 local main = win:Tab("Main")
 
+main:Toggle("Auto Roll",false, function(Value)
+_G.AutoRoll = Value
+end)
+
 main:Toggle("Auto Upgrade",false, function(Value)
 _G.AutoUpgrade = Value
 end)
@@ -167,5 +171,12 @@ local args = {
 
 game:GetService("ReplicatedStorage").Network.Upgrades_Purchase:InvokeServer(unpack(args))
 wait(5)
+  end
+end
+
+while wait() do
+  if _G.AutoRoll == true then
+game:GetService("ReplicatedStorage").Network.Eggs_Roll:InvokeServer()
+wait(0.1)
   end
 end
